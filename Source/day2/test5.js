@@ -1,6 +1,6 @@
-var array=[1,2,3];
+var array = [1,2,3];
 
-// push , pop
+// push, pop
 
 array.push(4);
 console.log(array);
@@ -18,4 +18,7 @@ array.unshift(0);
 console.log(array);
 
 array.shift();
+console.log(array);
+
+array[0]=100;
 console.log(array);

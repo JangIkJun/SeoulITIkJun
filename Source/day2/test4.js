@@ -1,4 +1,4 @@
-var array= [];
+var array = [];
 var array2 = [1,2,3,4,5];
 var array3 = new Array(1,2,3,4,5);
 var array4 = new Array();
@@ -13,12 +13,12 @@ console.log(array2);
 console.log(array3);
 console.log(array4);
 
-var object= {};
+var object = {};
 object.a = array4;
 
-var array5 =[];
-array5[0]= object;
-array5[1]= object;
+var array5 = [];
+array5[0] = object;
+array5[1] = object;
 
-console.log(object.a);
+console.log(object);
 console.log(array5);

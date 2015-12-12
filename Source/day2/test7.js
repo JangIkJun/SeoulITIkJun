@@ -1,27 +1,31 @@
-var intro = function(name, age)
-{
-	console.log("내 이름은"+name+"이고, 나이는"+age+"입니다");
-};
-var add = function(a,b)
-{
-	return a+b;
-};
-var sub = function(a,b)
-{
-	return a+b;
-};
-var mul = function(a,b)
-{
-	return a*b;
-};
-var div =function(a,b)
-{
-	return a/b;
-};
+for(var i = 0; i < 10; i++){ 
+  console.log('i:'+i); 
+} 
 
-intro("장익준",18);
+console.log('---1');
 
-add(1,1);
-sub(1,1);
-mul(1,1);
-div(1,1);
+for(var i = 0; i < 10; i++){ 
+  if(i === 5) { 
+    break; 
+  } 
+  console.log('i:'+i); 
+} 
+
+console.log('---2');
+
+for(var i = 0; i < 10; i++){ 
+	if(i === 5) { 
+		continue; 
+	} 
+	console.log('i:'+i); 
+} 
+
+console.log('---3');
+
+for(var i = 0; i < 10; i++) { 
+	for(var j = 0; j < 10; j++) { 
+	 	console.log('i:'+i+'\tj:'+j); 
+	}
+}
+ 
+ 

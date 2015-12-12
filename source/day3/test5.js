@@ -1,6 +1,6 @@
 var users = [];
 
-var signin = function(name, age) {
+var signin = function(name, age, callback) {
   if(!name || !age) {
   	// name, age가 모두 있는지 확인한다.
     console.log('가입실패! 이름, 나이를 입력하세요.');
@@ -19,10 +19,11 @@ var signin = function(name, age) {
   var user = {name: name, age: age};
   users.push(user);
   console.log('가입성공!');
+  callback();
   return;
 }
 
-var signout = function(name) {
+var signout = function(name, callback) {
 	if(!name) {
 		console.log('탈퇴실패! 이름을 입력하세요.');
 		return;
@@ -32,6 +33,7 @@ var signout = function(name) {
 		if(users[i].name === name) {
 			users.splice(i, 1);
 			console.log('탈퇴성공!');
+			callback();
 			return;
 		}
 	}
@@ -48,10 +50,11 @@ var printUsers = function() {
 	console.log('***************************');
 }
 
-signin('a', 10);
-signin('b', 20);
-signin('c', 22);
-signout('a');
-signout('d');
+// signin('a', 10, printUsers);
+// signin('b', 20, printUsers);
+// signout('a', printUsers);
 
-printUsers();
+signin('a', 10, function() {
+	console.log('가입이 끝나고 콜백함수를 호출했다!!!!!!!!!!!');
+	printUsers();
+});
